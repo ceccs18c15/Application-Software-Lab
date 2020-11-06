@@ -1,18 +1,17 @@
-/**
+/*
  *DEVIKA J
  *S5 C
  *CHN18CS037
  *ROLL NO: 15
  *Application Software Lab 
  *Experiment 1
- *
  */
 
 Use LAB1;
 
 #a
 CREATE TABLE student (
-	 sno INT AUTO_INCREMENT PRIMARY KEY,
+   sno INT AUTO_INCREMENT PRIMARY KEY,
    name VARCHAR(50) NOT NULL,
    marks INT NOT NULL,
    dept VARCHAR(20) NOT NULL
