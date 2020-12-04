@@ -1,2 +1,29 @@
-a) create a table class.fields are name and id
+#a create a table class.fields are name and id#
 
+CREATE TABLE Class (
+`id` INT PRIMARY KEY AUTO_INCREMENT
+`name` VARCHAR(50)
+);
+
+
+#b Insert values into the table#
+INSERT INTO Class (`name`) VALUES ("SANJU"), ("MEERA"), ("JANA");
+
+#c Display the table#
+SELECT * FROM Class;
+
+#d Apply commit, save point and rollback commands#
+START TRANSACTION;
+
+INSERT INTO Class (`name`) VALUES ("NEWMAN");
+ROLLBACK; 
+
+INSERT INTO Class (`name`) VALUES ("NEWMAN");
+COMMIT;
+
+START TRANSACTION;
+SAVEPOINT BeforeEvilEra;
+INSERT INTO Class (`name`) VALUES ("EVILERA");
+ROLLBACK TO BeforeEvilEra;
+
+COMMIT;
